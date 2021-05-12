@@ -1,8 +1,8 @@
 <template>
-  <div class="p-d-flex p-jc-end">
+  <div v-if="Toggled" class="p-d-flex p-jc-end">
     <Panel
       header="Admin Panel"
-      :toggleable="true"
+      :toggleable="false"
       style="background-color: transparent"
     >
       <div class="p-panel-content">
@@ -122,6 +122,7 @@ export default {
   },
   data: () => {
     return {
+      Toggled: false,
       PlayerCoords: null,
       PlayerRotation: null,
       Entity: null,
